@@ -1,0 +1,31 @@
+﻿@model List<PracticaParcial.Web.Entidades.ResultadoOperacion>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Resultado";
+}
+
+<h3>Resultados</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Operacion</th>
+            <th>Operando1</th>
+            <th>Operador</th>
+            <th>Operando2</th>
+            <th>Resultado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var resultado in Model)
+        {
+            <tr>
+                <td>@resultado.Operacion</td>
+                <td>@resultado.Operando1</td>
+                <td>@resultado.Operador</td>
+                <td>@resultado.Operando2</td>
+                <td>@resultado.Resultado</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,22 @@
+﻿@model PracticaParcial.Web.Models.SumarModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Sumar";
+}
+<h3>Sumar</h3>
+
+<form action="/Calculadora/Sumar" method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(model => model.Numero1)
+        @Html.TextBoxFor(model => model.Numero1, new { @class = "form-control", type = "number" })
+        @Html.ValidationMessageFor(model => model.Numero1, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Numero2)
+        @Html.TextBoxFor(model => model.Numero2, new { @class = "form-control", type = "number" })
+        @Html.ValidationMessageFor(model => model.Numero2, "", new { @class = "text-danger" })
+    </div>
+    <p>@ViewData["ResultadoSuma"]</p>
+    <button type="submit" class="btn btn-primary">Operar</button>
+</form>

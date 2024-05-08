@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Principal Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido</h1>
+    <p>@ViewData["MensajeBienvenida"]</p>
+    <a class="nav-link text-dark" asp-area="" asp-controller="Calculadora" asp-action="Sumar">Ir a calculadora de sumas</a>
+    <a class="nav-link text-dark" asp-area="" asp-controller="Calculadora" asp-action="Restar">Ir a calculadora de restas</a>
+</div>
